@@ -86,7 +86,7 @@ export class Viewer {
       // Lights
       addLights: true,
       exposure: 1.0,
-      textureEncoding: "Linear",
+      textureEncoding: "sRGB",
       ambientIntensity: 1.0,
       ambientColor: 0xffffff,
       directIntensity: 0.25,
@@ -119,7 +119,7 @@ export class Viewer {
 
     this.renderer = window.renderer = new WebGLRenderer({ antialias: true });
     this.renderer.physicallyCorrectLights = true;
-    this.renderer.outputEncoding = LinearEncoding;
+    this.renderer.outputEncoding = sRGBEncoding;
     this.renderer.setClearColor(0xcccccc);
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(el.clientWidth, el.clientHeight);
